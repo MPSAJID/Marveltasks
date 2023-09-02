@@ -1,0 +1,11 @@
+
+
+
+vi is a text editor which is included in all linux machines even the minimal ones.
+unlike easy to use nano , vi is a modal text editor which has a command and insert mode.
+to open a file in vi editor we just type teh command in the terminal : $ vi "filename".
+when we open vi the editor will be in command mode. 
+some of the commands ::
+>pressing 'x' key to delete the lettor under the cursor.
+>typing dd deletes the entire line.
+>to save the file enter escape key to get into command mode then type :wq to save and exit.

@@ -1,0 +1,16 @@
+Get familiar with the command line 
+In this task we get to know the command line and do the following tasks:
+
+1)create a folder named Test
+$mkdir test
+2)cd into that folder
+$cd test
+3)create a blank file without using any text editor
+$touch blank.txt
+4)list the files in that folder
+$ls
+5)create 2600 folders in this folder where each folder is named like . For example, M90 or B56.
+$mkdir S{1..2600}
+6)concatenate two text files containing any random text and display them on the terminal.
+$cat one.txt two.txt > three.txt
+$cat three.txt
