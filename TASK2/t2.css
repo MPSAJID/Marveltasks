@@ -1,0 +1,33 @@
+/* #img1{
+    width: 20%;
+    height: 100%;
+    margin-top: 5%;
+}
+#img2{
+    width: 20%;
+    justify-content: end;
+    
+} */
+/* #a1{
+    background-image:url('1.jpg');
+   
+    
+} */
+body{
+    color: antiquewhite;
+    background-image: url('1.jpg');
+}
+h1{
+    color: brown;
+}
+h3{
+    color: cadetblue;
+}
+button{
+    border-radius: 2%;
+    background-color: rgb(0, 0, 0);
+    color: blanchedalmond;
+}
+/* #recipe{
+    box-sizing: 100%,60%;
+} */
