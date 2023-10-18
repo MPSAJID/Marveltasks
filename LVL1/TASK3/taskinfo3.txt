@@ -1,0 +1,7 @@
+PROMISES :
+As the callback programs create callback hell ,PROMISES
+solve this issue.promise is an object  returned by async function
+which represents the state of the operation ,also promises are 
+easier to nest and easier to identify the errors in the code.
+the same recipe program is implemented using promises.
+link for code : https://github.com/MPSAJID/Marveltasks/tree/main/TASK3

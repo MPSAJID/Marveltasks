@@ -1,0 +1,11 @@
+INTRODUCTION TO CYBERSECURITY:
+This section provides brief introduction on CYBERSECURITY,
+different types of hackers(blackhat,greyhat,whitehat,etc).
+various types of attacks including but not limited to malware,
+phishing, sql injection ,etc.
+also to introduce cryptography and convert the text Cybersecurity in Marvel into 
+caesar cipher : Jfilyzljbypaf pu Thycls //
+morse code : -.-. -.-- -... . .-. ... . -.-. ..- .-. .. - -.-- / .. -. / -- .- .-. ...- . .-.. //
+railfence cipher : Cbreuiyi avlyescrt nMre //
+polybius cipher : 135412154243151345422444542433321142511531 //
+playfair cipher : MCCHIYHDRYGSSRONVALOEV //

@@ -1,0 +1,8 @@
+INTRODUCTION TO CLOUD COMPUTING:
+
+In this task we understand the basics of cloud computing .
+various types of cloud services including SaaS,Paas,Iaas etc.
+various cloud service providers such as AWS,Azure,GCPetc.
+public , private and hybrid models of cloud service.
+comparision of various cloud service providers.
+in the HANDS ON task we learn how to share files between connected computers on the same network

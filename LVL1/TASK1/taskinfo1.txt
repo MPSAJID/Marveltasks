@@ -1,0 +1,9 @@
+JAVASCRIPT  :
+
+After learning the basics of javascript..the given task is to create 
+a small webpage which takes names and marks of students and displays 
+the percentage , rank , and class average ;
+using queryselector,event listener and other tags taking input and calculating
+the percentage and using sort function to sort the students according to their 
+percentages and give ranks and also find the class average .
+link for code : https://github.com/MPSAJID/Marveltasks/tree/main/TASK1

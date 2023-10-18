@@ -4,3 +4,4 @@ then we take the login info with the command last an dwith the tag -s which mean
 then this information is piped (|) and using grep we find the logins of the month of august and the
 output is saved in a file called loginfo.txt .
 then it is moved to a folder named logs and then it is zipped using the tar cvzf command ,which combines tar and gzip.
+github link : https://github.com/MPSAJID/Marveltasks/tree/main/TASK6
