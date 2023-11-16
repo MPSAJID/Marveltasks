@@ -1,0 +1,8 @@
+This demonstrates how to make a simple HTTP API with Node.js running on AWS Lambda and API Gateway using the Serverless Framework.
+steps:
+1>install Serverless
+2>create aws account and IAM user in it 
+3>copy the keys and enter them in serverless configuration in terminal
+4>create a template and deploy
+5>using the api end point provided we can access the function
+

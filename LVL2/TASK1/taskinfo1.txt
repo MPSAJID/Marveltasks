@@ -1,0 +1,81 @@
+TASK1 : OSI
+
+OSI stands for open systems interconnection.
+It is a framework which explains about the process of transfer/flow  of data between two systems. 
+
+There are 7 levels of the OSI model which follows the topdown order.
+1)Physical layer:
+                lowest layer and the actual Physical connection between devices.Information is in the form of bits.
+        functions:bitsync,bitrate control,physical topologies,transmission mode.
+        device/protocol: hub, repeater , modem ,cables etc
+2)datalink layer:
+                responsible for node-node error free delivery of messages(frames) using mac address(get through arp request).
+        functions:framing, physical addressing,errorcontrol,flowcontrol,accesscontrol.
+        device/protocol: switch,bridge etc.
+3)Network layer:
+                transmission of data fron one host to another, selects shortest part to transmit,places IPadd in the header.
+        functions:routing , logical addressing.
+        device/protocol: used by routers and switches.
+4)Transport layer:
+                It is responsible for end-to-end communication between devices on a network.
+        functions:Segmentation and Reassembly,Service Point Addressing.
+        Services:connection oriented service: 3phase process: connection,data transfer,disconnection.
+                 connectionless service: used for faster transfers
+        device/protocol: TCP,UDP,netbios,pptp etc
+5)Session layer: 
+                responsible for the establishment of connection, maintenance of sessions, and authentication, and also ensures security.
+        functions:Session establishment, maintenance, and termination,synchronization,dialog controller.
+        device/protocol: netbios,pptp etc
+6)Presentation layer:
+                (translation layer)The data from the application layer is extracted here and manipulated as per the required format to transmit over the network. 
+        functions:translation,encryption/decryption,compression.
+        device/protocol:jpeg,mpeg,gif etc
+7)Application layer:
+                serves as a window for the application services to access the network and for displaying the received information to the user. 
+        functions:network virtual terminal,FTAM,mail services,directory services.
+        device/protocol:SMTP
+
+
+HANDSHAKES
+        it defines the process of communication between devices and processes.
+
+TWO WAY HANDSHAKES:
+                uses syn and ack messages.
+                client sends a syn message to server with a seq number ,server acknowledges syn message with ack message with a seq number.
+                when process is delayed the process breaks.
+THREE WAY HANDSHAKES :
+                here client sends syn with seq x, server acknowledges the seq x sending a syn-ack with seq y,then client verifies with an ack.
+
+
+
+ROUTERS
+        networking devices operating at network layer(layer3 of OSI)
+
+
+        features: 
+                can be used in both lan and wan
+                transfers in the form of IP packets
+                Routers provide protection against broadcast storms.
+                more expensive than hubs ,bridges,switches
+                ex-cisco,dlink.hp.,3com,juniper,nortel
+        routing table:
+                The routing table stores the available routes for all destinations.
+               contains
+                IP addresses and subnet mask of the nodes in the network
+                IP addresses of the routers in the network
+                Interface information among the network devices and channels
+
+        1)static routing table:
+                Here, the routes are fed manually and are not refreshed automatically. 
+                It is suitable for small networks containing 2-3 routers.
+        2)dynamic routing table:
+                Here, the router communicates with other routers using routing protocols to determine the available routes.
+                It is suited for larger networks having large number of routers.
+
+        Types of routers:
+                wireless
+                broadband
+                core
+                edge
+                brouters
+                
