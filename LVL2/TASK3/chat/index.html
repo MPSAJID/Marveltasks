@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+<body style="margin:5% 10% 10% 10%;">
+    <div class="container" style="background-color: beige;">
+        <br>
+        <div class="jumbo">
+            <h1 style="text-align: center;">Send Message</h1>
+            <br>
+            <h4>Name</h4>
+            <input id="name" class="form-control" placeholder="Name">
+            <br>
+            <h4>Message</h4>
+            <textarea id="message" class="form-control" placeholder="Your Message Here">
+            </textarea>
+            <br>
+            <button id="send" class="btn btn-success" style="background-color: aquamarine;">Send</button>
+            <button class="clear" id="clear">clear chat</button>
+        </div>
+        <div id="messages">
+        </div>
+        <br>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+            <script src="clientside.js"></script>
+</body>
+
+</html>
