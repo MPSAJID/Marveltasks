@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const cors = require('cors');
+require('dotenv').config();
 
 app.use(express.static(__dirname));
 app.use(bodyParser.json());
@@ -14,7 +15,6 @@ app.use(cors());
 
 
 const Message = mongoose.model('Message',{ name : String  ,message : String });
-// const Message = require('./models/Message');
 
 app.get('/messages', (req, res) => {
   Message.find({})
@@ -27,16 +27,30 @@ app.get('/messages', (req, res) => {
 })
 
 app.post('/messages', (req, res) => {
-  var message = new Message(req.body);
+  const message = new Message(req.body);
   message.save()
-    .then(()=>{
-        res.sendStatus(500);
-        io.emit('message', req.body); 1
+  .then(()=>{
+    res.sendStatus(200);
+    io.emit('message', req.body); 
     })
     .catch(()=>{
-        res.sendStatus(200);
+      res.sendStatus(500);
     })
 })
+app.delete('/messages/clr', async (req, res) => {
+  try {
+      const cleared = await Message.deleteMany();
+      if (cleared) {
+          console.log('Chat cleared');
+          io.emit('chat_cleared');
+          res.sendStatus(200);
+      }
+  } catch (err) {
+      console.error('Error deleting items:', err);
+      res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 
 io.on('connection', () =>{
   console.log('a user is connected')

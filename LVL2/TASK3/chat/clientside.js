@@ -1,3 +1,6 @@
+var socket = io();
+socket.on('message', addMessages)
+    
     // document.addEventListener('DOMContentLoaded', function () {   
          document.getElementById('send').addEventListener('click', function () {
         sendMessage({
@@ -9,9 +12,9 @@
     getMessages();
 // });
 
-    // document.getElementById('clear').addEventListener('click',function(){
-        
-    // });
+    document.getElementById('clear').addEventListener('click',function(){     
+       clearchat(); 
+    });
 
 function addMessages(message) {
     var messagesContainer = document.getElementById('messages');
@@ -23,8 +26,8 @@ function addMessages(message) {
     messagesContainer.appendChild(messageElement);
 }
 
-function getMessages() {
-    fetch('http://localhost:3000/messages')
+async function getMessages() {
+    await fetch('http://localhost:3001/messages')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -39,8 +42,8 @@ function getMessages() {
         });
 }
 
-function sendMessage(message) {
-    fetch('http://localhost:3000/messages', {
+async function sendMessage(message) {
+   await fetch('http://localhost:3001/messages', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -51,11 +54,29 @@ function sendMessage(message) {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            // Handle successful response if needed
-            console.log(response);
         })
         .catch(error => {
             console.error('Fetch error:', error);
         });
         document.getElementById('message').value="";
+}
+
+async function clearchat() {
+    
+    if (confirm("Are you sure you want to clear the chat? This action cannot be undone.")) {
+        try {
+        const response = await fetch('http://localhost:3001/messages/clr', {
+            method: 'DELETE'
+        });
+        if (response.ok) {
+            console.log('Chat cleared successfully');
+            
+            socket.emit('chat_cleared');
+        } else {
+            console.error('Failed to clear chat');
+        }
+    } catch (error) {
+        console.error('Fetch error:', error);
+    }
+}
 }
