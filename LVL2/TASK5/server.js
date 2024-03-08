@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const cors = require('cors');
+require('dotenv').config();
 
 app.use(express.static(__dirname));
 app.use(bodyParser.json());
@@ -55,7 +56,7 @@ io.on('connection', () =>{
   console.log('a user is connected')
  })
 
- mongoose.connect('mongodb+srv://admin1:atlasadmin@cluster0.bxwjp6i.mongodb.net/cdb');
+ mongoose.connect(process.env.MONGODB_URL);
 
 
 
