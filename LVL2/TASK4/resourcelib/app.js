@@ -3,6 +3,8 @@ const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+require('dotenv').config();
+
 
 // Middleware
 app.use(express.json());
@@ -12,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'/views'))
 
-mongoose.connect('mongodb+srv://admin1:atlasadmin@cluster0.bxwjp6i.mongodb.net/resourceLibrary')
+mongoose.connect(process.env.MONGODB_URL)
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('Could not connect to MongoDB', err));
 
@@ -55,5 +57,5 @@ app.post('/account', (req, res) => {
 
 // Start the server
 app.listen(3002, () => {
-  console.log(`Server is running on port 3001`);
+  console.log(`Server is running on port 3002`);
 });
