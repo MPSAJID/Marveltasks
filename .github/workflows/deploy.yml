@@ -20,7 +20,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker image
-      run: docker build -t mpsajid/chat_app:latest .
+      run: docker build -t mpsajid/chat_app:latest ./LVL2/TASK5/
 
     - name: Push Docker image
       run: docker push mpsajid/chat_app:latest
