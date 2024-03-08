@@ -1,7 +1,7 @@
-FROM mcr.microsoft.com/windows/nanoserver:ltsc2022 AS base
+FROM mhart/alpine-node:latest
 WORKDIR /app
 
-COPY package* ./
+COPY package*.json ./
 
 RUN npm install
 
