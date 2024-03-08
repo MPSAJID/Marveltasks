@@ -22,9 +22,13 @@ const Resource = mongoose.model('Resource',{ category : String, author : String,
 // Routes
 
 app.get('/resources', (req, res) => {
-  // Fetch resources from the database
-  // Render a view displaying the list of resources
   res.render("resources/resources.ejs");
+});
+app.get('/allresources', (req, res) => {
+  res.render("resources/allresources");
+});
+app.get('/show', (req, res) => {
+  res.render("resources/show");
 });
 
 app.get('/', async (req, res) => {

@@ -7,10 +7,11 @@
     <title><%= resource.title %></title>
 </head>
 <body>
+    <%- include ('../partials/nav') %>
     <h1><%= resource.title %></h1>
     <p><strong>Description:</strong> <%= resource.description %></p>
     <p><strong>Author:</strong> <%= resource.author %></p>
-    <!-- Add more details as needed -->
+   
     <a href="/resources">Back to All Resources</a>
 </body>
 </html>

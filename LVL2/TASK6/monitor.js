@@ -1,12 +1,12 @@
 const chokidar = require('chokidar');
 const { exec } = require('child_process');
 
-const sourceDir = 'C:/path/to/source'; 
-const destinationHost = 'example.com';
-const destinationDir = '/path/to/destination';
+const sourceDir = 'G:/tech/Marveltasks/LVL2/TASK3/chat'; 
+
+const destinationDir = 'G:/tech/Marveltasks/LVL2/TASK6/imgfolder';
 
 const watcher = chokidar.watch(sourceDir, {
-  ignored: /^\./, // ignore dotfiles
+  ignored: ['**/node_modules/**', '**/.env/**',/^\./],
   persistent: true
 });
 
@@ -18,7 +18,7 @@ watcher.on('add', filePath => {
 });
 
 function transferImage(filePath) {
-  const rsyncCommand = `rsync -avz --remove-source-files "${filePath}" ${destinationHost}:${destinationDir}`;
+  const rsyncCommand = `rsync -avz --remove-source-files "${filePath}" ${destinationDir}`;
   exec(rsyncCommand, (error, stdout, stderr) => {
     if (error) {
       console.error(`Error transferring image: ${error}`);

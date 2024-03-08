@@ -1,17 +1,16 @@
 <!-- views/resources/index.ejs -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resource Library - All Resources</title>
-</head>
+    <%- include ('../partials/head') %>
+
 <body>
-    <h1>All Resources</h1>
-    <ul>
-        <% resources.forEach(resource => { %>
-            <li><a href="/resources/<%= resource._id %>"><%= resource.title %></a></li>
-        <% }); %>
-    </ul>
+    <%- include ('../partials/nav') %>
+    <div style="margin-top: 5%;">
+        <h1>All Resources</h1><a href="/allresources" >click here</a>
+       
+    </div>
+    
 </body>
+<%- include ('../partials/footer') %>
+<%- include ('../partials/scripts') %>
 </html>
