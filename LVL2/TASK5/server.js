@@ -41,7 +41,7 @@ app.delete('/messages/clr', async (req, res) => {
   try {
       const cleared = await Message.deleteMany();
       if (cleared) {
-          console.log('Chat cleared');
+          console.log('Chat cleared succesfully!');
           io.emit('chat_cleared');
           res.sendStatus(200);
       }
